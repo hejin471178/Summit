@@ -1,0 +1,442 @@
+
+/* --- About Page Styles --- */
+
+/* About Banner */
+.about-banner {
+    display: flex;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/about/about-banner=.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-slice {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.banner-slice::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
+.city-name {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: 'Dancing Script', cursive; /* Fallback or specific font needed */
+    font-size: 1.2rem;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-style: italic;
+}
+
+.about-title-overlay {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.about-title-overlay h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px rgba(255,255,255,1);
+    color: transparent; /* Outline effect */
+}
+
+/* Make text solid white to match design better */
+.about-title-overlay h1 {
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+.about-title-overlay p {
+    color: #fff;
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Breadcrumb */
+.breadcrumb-container {
+    padding: 15px 0;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    margin-left: 10px;
+    color: #999;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    color: var(--primary-dark);
+}
+
+/* About Intro */
+.about-intro {
+    padding: 60px 0 200px 0;
+    background-image: url('../img/about/about-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.intro-header {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.red-line {
+    width: 240px;
+    height: 4px;
+    background-color: #cc3333;
+    margin-bottom: 15px;
+}
+
+.intro-header h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.intro-content {
+    max-width: 900px;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* History Section */
+.history {
+    background-image: url('https://images.unsplash.com/photo-1596484552993-9c59573887c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 80px 0 120px; /* Extra padding bottom for leadership bar */
+    color: #333;
+}
+
+.history-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+}
+
+.history-container {
+    position: relative;
+    z-index: 1;
+}
+
+.history h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.history-text {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.history-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.subsidiaries {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.subsidiaries h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subsidiaries ul li,.intro-content ul li {
+    list-style: disc;
+    margin-bottom: 8px;
+    margin-left: 20px;
+    color: #333;
+}
+
+/* Leadership Bar */
+.leadership-bar {
+    position: absolute;
+    bottom: 40px;
+    left: 10%; /* Adjust as needed */
+    right: 10%;
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 2;
+    min-height: 80px;
+}
+
+.leadership-label {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Create the slant effect */
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    min-width: 250px;
+    margin-right: -40px; /* Overlap fix */
+    z-index: 2;
+}
+
+.leadership-label h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.leadership-desc {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 60px; /* Extra left padding for slant */
+    background: #fff;
+}
+
+.leadership-desc p {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Key Markets Section */
+.key-markets {
+    background-color: #1f2937; /* Dark background */
+    color: #fff;
+    padding: 80px 0;
+}
+
+.markets-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.markets-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.markets-header .divider {
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto 20px;
+}
+
+.market-subtitle {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.markets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.market-card {
+    background-color: #fff;
+    color: #333;
+    padding: 30px 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.market-card.with-bg {
+    background: #000;
+    color: #fff;
+}
+
+.card-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/about/market-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c8c8c8;
+    height: 50px;
+}
+
+.card-header i {
+    font-size: 1.2rem;
+    color: #e67e22; /* Orange accent */
+}
+
+.market-card.with-bg .card-header i {
+    color: #3498db; /* Blue accent for semi */
+}
+
+.card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card-products {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-products h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-app p {
+    font-size: 1rem;
+    line-height: 1.5;
+  
+    padding-top: 10px;
+}
+
+.market-card.with-bg .card-app p {
+    color: rgba(255,255,255,0.8);
+    border-color: rgba(255,255,255,0.2);
+}
+
+/* Responsive adjustments for About Page */
+@media (max-width: 992px) {
+    .markets-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .leadership-bar {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: relative;
+        margin-top: 40px;
+    }
+    
+    .history {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-banner {
+        height: 300px;
+    }
+    
+    .about-title-overlay h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner-slice .city-name {
+        font-size: 0.9rem;
+    }
+    
+    .leadership-label {
+        min-width: 180px;
+        clip-path: none;
+        margin-right: 0;
+    }
+    
+    .leadership-bar {
+        flex-direction: column;
+    }
+    
+    .leadership-desc {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .markets-grid {
+        grid-template-columns: 1fr;
+    }
+}
