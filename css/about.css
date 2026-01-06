@@ -80,7 +80,7 @@
     max-width: 600px;
     margin: 0 auto;
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     padding: 10px 20px;
     border-radius: 4px;
     text-align: left;
@@ -322,6 +322,16 @@
     background: #000;
     color: #fff;
 }
+
+.market-card:hover {
+    background-color: #fff;
+    color: #fff;
+    background-image: url('../img/about/market-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
 
 .card-bg-overlay {
     position: absolute;
