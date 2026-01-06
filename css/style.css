@@ -1026,6 +1026,16 @@ footer {
         align-items: flex-start; /* 左对齐 */
         width: 100%;
     }
+    .footer-nav a{
+            padding: 10px 10px;
+    }
+    .footer-copyright {
+    text-align: right;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-indent: 10px;
+    }
+    
 }
 
 @media (max-width: 480px) {
