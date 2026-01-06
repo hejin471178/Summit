@@ -424,7 +424,7 @@
 
 @media (max-width: 768px) {
     .about-banner {
-        height: 400px;
+        height: 460px;
         margin-top: 60px;
     }
     
@@ -456,22 +456,32 @@
     }
 
     .about-banner {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    background-image: url('../img/about/about-banner.jpg');
-    background-repeat: no-repeat;
-    background-size: 200%;
-    background-position: center;
-    margin-top:60px;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        background-image: url('../img/about/about-banner.jpg');
+        background-repeat: no-repeat;
+        background-size: 200%;
+        background-position: center;
+        margin-top:60px;
     }
     .about-title-overlay p{
         background: none;
         padding: 0;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
     }
     .about-title-overlay h1{
         text-align: left;
+         color: #fff;
+        -webkit-text-stroke: 2px #000;
+       
+        font-weight: 900;
+        font-family: sans-serif;
     }
+
 
     .about-title-overlay {
     position: absolute;
