@@ -204,6 +204,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 }
 
 .hero-overlay {
@@ -349,10 +350,10 @@ header.scrolled {
 /* Profile Section */
 .profile {
     padding: 80px 0;
-    background-image: url('../img/company-profile.jpg');
+    /* background-image: url('../img/company-profile.jpg');
     background-repeat: no-repeat;
     background-size: 35%;
-    background-position: 25% center;
+    background-position: 25% center; */
 }
 
 .profile-container {
@@ -369,9 +370,7 @@ header.scrolled {
 .profile-image img {
     width: 100%;
     height: auto;
-    border-radius: 2px;
-    /* Optional: Simulating the cut shape if desired, but keeping rectangle is cleaner for now */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    
 }
 
 .profile-text {
@@ -521,9 +520,8 @@ footer {
 
 .footer-text p {
     line-height: 1.2;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: rgba(255,255,255,0.8);
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
@@ -534,23 +532,23 @@ footer {
 }
 
 .footer-nav a {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.8);
     transition: color 0.3s;
     font-size: 0.75rem;
     text-transform: uppercase;
-    padding: 10px 22px;
+    padding: 10px 20px;
     letter-spacing: 1px;
 }
 
 .footer-nav a:hover {
     color: var(--white);
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.6);
     padding: 8px 20px;
     border-radius: 2px;
 }
 
 .btn-footer {
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.6);
     padding: 8px 20px;
     border-radius: 2px;
 }
@@ -558,10 +556,20 @@ footer {
 .footer-copyright {
     text-align: right;
     font-size: 0.7rem;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.6);
+    text-indent: 20px;
+   
 }
-
-
+.footer-copyright p{
+    height: 50px;
+    line-height: 50px;
+}
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 左对齐 */
+  width: 60%;
+}
 
 /* Hero Section */
 .services-hero {
@@ -1008,6 +1016,15 @@ footer {
     }
     .service-text{
         width: 90%;
+    }
+    .footer-nav{
+        gap: 0px;
+    }
+    .footer-right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* 左对齐 */
+        width: 100%;
     }
 }
 
