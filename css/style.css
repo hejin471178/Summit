@@ -186,6 +186,12 @@ header.scrolled {
     color: var(--white);
 }
 
+.nav-links a.active {
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 5px;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
