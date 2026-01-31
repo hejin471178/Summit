@@ -331,6 +331,7 @@ header.scrolled {
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text-light);
+    margin-bottom: 30px;
 }
 
 .commitment-card:hover {
@@ -885,6 +886,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    
 }
 
 .mineral-card {
@@ -913,7 +915,9 @@ footer {
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     border-bottom: 5px solid #000;
 }
-
+.mineral-info{
+   margin-bottom: 20px;
+}
 .mineral-info h3 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -1275,3 +1279,294 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+/* Error Page */
+.error-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 6rem;
+    }
+    .error-message {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* Renewable Energy Page Styles */
+
+/* Hero Section */
+.renewable-hero {
+    height: 80vh;
+    min-height: 500px;
+    background-image: url('../img/renewable_energy/renewable-hero.jpg'); /* Placeholder */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.renewable-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay to make text pop */
+    z-index: 1;
+}
+
+.renewable-hero-content {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-card-white {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.hero-card-white p {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Content Sections */
+.renewable-section {
+    padding: 80px 0;
+}
+
+.section-header-left {
+    margin-bottom: 40px;
+}
+
+.line-red {
+    width: 260px;
+    height: 4px;
+    background-color: #d32f2f; /* Red color matching design */
+    margin-bottom: 20px;
+}
+
+.renewable-text p {
+    margin-bottom: 20px;
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Banner Image */
+.renewable-banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.renewable-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Project Gallery Carousel */
+.project-gallery {
+    position: relative;
+    height: 450px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    width: 100%;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.gallery-item {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 55%; 
+    max-width: 700px;
+    height: 350px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    opacity: 0.7;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+    display: block; /* Ensure block display */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Prevent image drag interfering with click */
+}
+
+.gallery-item.active {
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    z-index: 10;
+    height: 400px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.gallery-item.prev {
+    left: 20%;
+    z-index: 5;
+    filter: brightness(0.7);
+}
+
+.gallery-item.next {
+    left: 80%;
+    z-index: 5;
+    filter: brightness(0.7);
+}
+
+/* Hide others if more than 3 */
+.gallery-item:not(.active):not(.prev):not(.next) {
+    left: 50%;
+    opacity: 0;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-gallery {
+        height: 300px;
+    }
+    
+    .gallery-item {
+        width: 70%;
+        height: 220px;
+    }
+    
+    .gallery-item.active {
+        height: 260px;
+    }
+    
+    .gallery-item.prev {
+        left: 10%;
+    }
+    
+    .gallery-item.next {
+        left: 90%;
+    }
+}
+
+/* Downloads Section */
+.downloads-section {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.downloads-section p {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-red {
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 50px; /* Pill shape */
+    padding: 14px 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(211, 47, 47, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+    background-color: #b71c1c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(211, 47, 47, 0.3);
+    color: white;
+}
+
+/* Responsive */
+/* @media (max-width: 992px) removed to allow carousel 3D effect to persist until 768px adjustment */
+
+@media (max-width: 768px) {
+    .hero-card-white {
+        padding: 30px 20px;
+    }
+    
+    .hero-card-white p {
+        font-size: 1rem;
+    }
+    
+    .renewable-banner {
+        height: 300px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .btn-red {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+

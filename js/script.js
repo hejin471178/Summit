@@ -53,4 +53,59 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('scrolled');
         }
     });
+
+    // Carousel Functionality for Renewable Energy Page
+    const gallery = document.querySelector('.project-gallery');
+    if (gallery) {
+        const items = gallery.querySelectorAll('.gallery-item');
+        // Start with the middle item (index 1)
+        let currentIndex = 1; 
+        let intervalId;
+
+        function updateCarousel() {
+            items.forEach((item, index) => {
+                item.classList.remove('active', 'prev', 'next', 'large');
+                
+                if (index === currentIndex) {
+                    item.classList.add('active');
+                } else if (index === (currentIndex - 1 + items.length) % items.length) {
+                    item.classList.add('prev');
+                } else if (index === (currentIndex + 1) % items.length) {
+                    item.classList.add('next');
+                }
+            });
+        }
+
+        // Add click event to items
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+                // Reset timer on manual interaction
+                resetTimer();
+            });
+        });
+
+        function startTimer() {
+            intervalId = setInterval(() => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel();
+            }, 4000);
+        }
+
+        function resetTimer() {
+            clearInterval(intervalId);
+            startTimer();
+        }
+
+        // Start auto-rotation
+        startTimer();
+
+        // Pause on hover
+        gallery.addEventListener('mouseenter', () => clearInterval(intervalId));
+        gallery.addEventListener('mouseleave', () => startTimer());
+
+        // Initialize
+        updateCarousel();
+    }
 });
