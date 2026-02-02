@@ -298,6 +298,14 @@ header.scrolled {
 
 .commitment-card .btn {
     margin-top: auto;
+    background-color: #fff;
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
+}
+
+.commitment-card:hover .btn {
+    background-color: var(--primary-dark);
+    color: var(--white);
 }
 
 .commitment-card:hover {
@@ -349,19 +357,11 @@ header.scrolled {
 }
 
 .commitment-card:hover {
-    background-color: var(--primary-dark);
-    color: var(--white);
+  
     border-color: transparent;
 }
-.commitment-card:hover h3 {
-    color: var(--white);
-}
-.commitment-card:hover p {
-    color: rgba(255,255,255,0.8);
-}
-.commitment-card:hover .icon-box {
-    color: var(--white);
-}
+
+
 
 .commitment-card:hover .btn-dark {
     background-color: var(--white);
@@ -1068,6 +1068,9 @@ footer {
     }
     .footer-nav a{
             padding: 10px 10px;
+    }
+    .footer-nav a:not(:last-child)::after {
+        display: none;
     }
     .footer-copyright {
     text-align: right;
