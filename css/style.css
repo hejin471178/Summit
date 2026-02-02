@@ -552,6 +552,7 @@ footer {
     display: flex;
     gap: 40px;
     align-items: center;
+    margin-bottom: 55px;
 }
 
 .footer-nav a {
@@ -812,6 +813,7 @@ footer {
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
+    scroll-margin-top: 120px;
 }
 
 /* Alternating Product List */
