@@ -446,6 +446,9 @@ header.scrolled {
 .product-item {
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .product-img-wrapper {
@@ -553,18 +556,30 @@ footer {
 
 .footer-nav a {
     color: rgba(255,255,255,0.8);
-    transition: color 0.3s;
+    transition: all 0.3s;
     font-size: 0.75rem;
-    text-transform: uppercase;
     padding: 10px 20px;
     letter-spacing: 1px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.footer-nav a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 1px;
+    background-color: rgba(255,255,255,0.3);
 }
 
 .footer-nav a:hover {
     color: var(--white);
-    border: 1px solid rgba(255,255,255,0.6);
-    padding: 8px 20px;
-    border-radius: 2px;
+    border-color: var(--white);
+    background-color: transparent;
 }
 
 .btn-footer {
