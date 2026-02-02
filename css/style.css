@@ -303,7 +303,7 @@ header.scrolled {
     transition: all 0.3s ease;
 }
 
-.commitment-card:hover .btn {
+ .btn:hover {
     background-color: var(--primary-dark);
     color: var(--white);
 }
